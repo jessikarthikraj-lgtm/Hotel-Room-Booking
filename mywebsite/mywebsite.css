@@ -1,0 +1,413 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: #222;
+  color: white;
+  padding: 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  float: left;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+nav {
+  float: right;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #666;
+  border-radius: 4px;
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Hero Section */
+.hero {
+  background-image:url("https://www.maisonvalentina.net/en/news-events/wp-content/uploads/2015/12/design-news-palazzo-versace-dubai.jpg");
+  color: white;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.hero .container {
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: #c59d5f;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #a17c43;
+}
+
+/* Sections */
+.section {
+  background: white;
+  padding: 3rem 0;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #222;
+}
+
+
+
+
+/* Rooms Section */
+.rooms {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.rooms h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 320px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-content h4 {
+    color: #e67e22;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+
+.book-btn {
+  margin-top: 1rem;
+  background-color: #c59d5f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.book-btn:hover {
+  background-color: #a17c43;
+}
+
+/* Booking Form */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Amenities */
+.amenities-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px #ccc;
+}
+
+/* Testimonials */
+.testimonial-slider {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-style: italic;
+  color: #444;
+  padding: 0 1rem;
+}
+
+.testimonial {
+  display: none;
+  font-size: 1.2rem;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.slider-controls {
+  margin-top: 1rem;
+}
+
+.slider-controls button {
+  background: #c59d5f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.slider-controls button:hover {
+  background: #a17c43;
+}
+
+/* Contact Form message */
+#contact-message,
+#booking-message {
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: green;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  font-size: 1.4rem;
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #c59d5f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background-color: #222;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 200px;
+    border-radius: 0 0 0 8px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  .room-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
