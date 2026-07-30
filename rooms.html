@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rooms</title>
+    <link rel="stylesheet" href="mywebsite.css">
+</head>
+<body>
+     <section class="rooms">
+    <h2>Our Rooms</h2>
+
+    <div class="cards-container">
+
+        <!-- Deluxe Room -->
+        <div class="card">
+            <img src="https://www.manila-hotel.com.ph/wp-content/uploads/2020/06/Superior-DeLuxe-Room_TB-1536x1022.jpg" alt="Deluxe Room">
+            <div class="card-content">
+                <h3>Deluxe Room</h3>
+                <p>✔ King-size Bed<br>
+                   ✔ Free Wi-Fi<br>
+                   ✔ Air Conditioning<br>
+                   ✔ Breakfast Included</p>
+                <h4>₹3,500 / Night</h4>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Executive Room -->
+        <div class="card">
+            <img src="https://img.freepik.com/premium-photo/modern-executive-hotel-room-with-smart-office-integration_706399-13506.jpg?w=2000" alt="Executive Room">
+            <div class="card-content">
+                <h3>Executive Room</h3>
+                <p>✔ Queen-size Bed<br>
+                   ✔ Smart TV<br>
+                   ✔ Balcony View<br>
+                   ✔ Complimentary Breakfast</p>
+                <h4>₹5,000 / Night</h4>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Luxury Suite -->
+        <div class="card">
+            <img src="https://img.freepik.com/premium-photo/exorbitant-luxury-hotel-with-tailoredmade-interior-design_1092689-56145.jpg" alt="Luxury Suite">
+            <div class="card-content">
+                <h3>Luxury Suite</h3>
+                <p>✔ Private Living Area<br>
+                   ✔ Jacuzzi<br>
+                   ✔ Ocean/City View<br>
+                   ✔ 24/7 Room Service</p>
+                <h4>₹8,500 / Night</h4>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="booking" class="booking section">
+  <div class="container">
+    <h2>Book Your Stay</h2>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="roomType">Room Type:</label>
+        <select id="roomType" name="roomType" required>
+          <option value="">Select Room</option>
+          <option value="Deluxe Suite">Deluxe Suite</option>
+          <option value="Executive Room">Executive Room</option>
+          <option value="Presidential Suite">Presidential Suite</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="checkIn">Check-in Date:</label>
+        <input type="date" id="checkIn" name="checkIn" required />
+      </div>
+      <div class="form-group">
+        <label for="checkOut">Check-out Date:</label>
+        <input type="date" id="checkOut" name="checkOut" required />
+      </div>
+      <div class="form-group">
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" min="1" max="10" required />
+      </div>
+      <button type="submit" class="btn">Submit Booking</button>
+    </form>
+    <div id="booking-message"></div>
+  </div>
+</section>
+</body>
+</html>
